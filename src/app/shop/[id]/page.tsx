@@ -1,5 +1,5 @@
 
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 import book1 from "@/app/assets/book-1premium_photo-1682255271649-866ebf8873d1.avif"
 import book2 from "@/app/assets/book-2premium_photo-1718303673913-5c765682b54c.avif"
@@ -51,6 +51,7 @@ async function Product(
                                     (img) => (
                                         book.id === img.id && (
                                             <Image
+                                                key={book.id}
                                                 src={img.img}
                                                 alt="Book Cover"
                                                 className="w-full h-48 object-cover"

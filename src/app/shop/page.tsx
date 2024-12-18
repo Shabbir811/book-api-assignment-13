@@ -1,5 +1,5 @@
 
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 
 
@@ -44,6 +44,7 @@ async function Shop() {
                                         (img) => (
                                             book.id === img.id && (
                                                 <Image
+                                                    key={book.id}
                                                     src={img.img}
                                                     alt="Book Cover"
                                                     className="w-full h-48 object-cover"
